@@ -2,6 +2,8 @@
 
 | brand  | job         | intitulé       | deadline   | date  | info  | dossier | état |
 | :---:  | ---         | ---            | ---        | ---   | :---: | :---:   | ---: |
+| AL     | news        | catalogue      | 05/03/2018 | mars  | ok    | ok      | ok   |
+| TL+ID  | news        | TH04_printemps | 26/02/2018 | mars  | ok    | ok      | ok   |
 | TL+ID  | EC+ZL       | TH04_printemps | 26/02/18   | mars  | ok    | ok      | ok   |
 | allb   | shed+pictos | site           | 03/2018    | mars  | ok    | ok      | 7h   |
 | allb   | shedule     | news cat       | 03/2018    | mars  | ok    | ok      | 7h   |
