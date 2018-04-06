@@ -2,7 +2,13 @@
 
 | brand  | job         | intitulé         | deadline   | date  | info  | dossier | état |
 | :---:  | ---         | ---              | ---        | ---   | :---: | :---:   | ---: |
+| MM     | news        | cat              | 03/04/18   | avril | ok    | ok      | ok   |
+| MM     | EC          | hp               | 03/04/18   | avril | ok    | ok      | ok   |
 | TL+ID  | news        | OM15             | 03/04/2018 | avril | ok    | ok      | ok   |
+| AL     | news        | catalogue        | 05/04/2018 | avril | ok    | ok      | ok   |
+| AL     | EC          | hp               | 05/04/2018 | avril | ok    | ok      | ok   |
+| TL     | news        | relance Cat      | 09/04/2018 | avril | ok    | ok      | ok   |
+| ID     | news        | relance Cat      | 09/04/2018 | avril | ok    | ok      | ok   |
 | CD     | EC          | hp               | 22/03/18   | avril | ok    | ok      | ok   |
 | TL+ID  | EC          | TH05_jardinage   | 25/03/2018 | avril | ok    | ok      | ok   |
 | CD     | news        | catalogue        | 22/03/2018 | avril | ok    | ok      | ok   |
