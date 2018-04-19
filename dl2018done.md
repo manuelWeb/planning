@@ -2,36 +2,41 @@
 
 | brand  | job         | intitulé         | deadline   | date  | info  | dossier | état |
 | :---:  | ---         | ---              | ---        | ---   | :---: | :---:   | ---: |
+| TL+ID  | news        | catalogue        | 23/04/2018 | mai   | ok    | ok      | ok   |
+| TL+ID  | EC          | TH06_cuisine     | 16/04/18   | avril | ok    | ok      | ok   |
+| TL+ID  | news        | TH06_cuisine     | 16/04/18   | avril | ok    | ok      | ok   |
+| HO     | EC          | hp               | 17/04/18   | avril | ok    | ok      | ok   |
+| HO     | news        | catalogue        | 17/04/18   | avril | ok    | ok      | ok   |
 | MM     | news        | cat              | 03/04/18   | avril | ok    | ok      | ok   |
 | MM     | EC          | hp               | 03/04/18   | avril | ok    | ok      | ok   |
-| TL+ID  | news        | OM15             | 03/04/2018 | avril | ok    | ok      | ok   |
-| AL     | news        | catalogue        | 05/04/2018 | avril | ok    | ok      | ok   |
-| AL     | EC          | hp               | 05/04/2018 | avril | ok    | ok      | ok   |
-| TL     | news        | relance Cat      | 09/04/2018 | avril | ok    | ok      | ok   |
-| ID     | news        | relance Cat      | 09/04/2018 | avril | ok    | ok      | ok   |
+| TL+ID  | news        | OM15             | 03/04/18   | avril | ok    | ok      | ok   |
+| AL     | news        | catalogue        | 05/04/18   | avril | ok    | ok      | ok   |
+| AL     | EC          | hp               | 05/04/18   | avril | ok    | ok      | ok   |
+| TL     | news        | relance Cat      | 09/04/18   | avril | ok    | ok      | ok   |
+| ID     | news        | relance Cat      | 09/04/18   | avril | ok    | ok      | ok   |
 | CD     | EC          | hp               | 22/03/18   | avril | ok    | ok      | ok   |
-| TL+ID  | EC          | TH05_jardinage   | 25/03/2018 | avril | ok    | ok      | ok   |
-| CD     | news        | catalogue        | 22/03/2018 | avril | ok    | ok      | ok   |
-| TL+ID  | news        | footer_belgacom  | 26/03/2018 | avril | ok    | ok      | ok   |
-| TL+ID  | news        | TH05_jardinage   | 25/03/2018 | avril | ok    | ok      | ok   |
+| TL+ID  | EC          | TH05_jardinage   | 25/03/18   | avril | ok    | ok      | ok   |
+| CD     | news        | catalogue        | 22/03/18   | avril | ok    | ok      | ok   |
+| TL+ID  | news        | footer_belgacom  | 26/03/18   | avril | ok    | ok      | ok   |
+| TL+ID  | news        | TH05_jardinage   | 25/03/18   | avril | ok    | ok      | ok   |
 | ID     | news        | catalogue        | 05/04/18   | avril | ok    | ok      | ok   |
-| TL     | news        | catalogue        | 27/03/2018 | avril | ok    | ok      | ok   |
+| TL     | news        | catalogue        | 27/03/18   | avril | ok    | ok      | ok   |
 | TL     | land        | surpression      | 19/03/18   | avril | ok    | ok      | ok   |
-| HO     | news        | catalogue        | 12/03/2018 | mars  | ok    | ok      | ok   |
-| MM     | news        | cat_new-template | 06/03/2018 | mars  | ok    | ok      | ok   |
-| MM     | news        | encart           | 06/03/2018 | mars  | ok    | ok      | ok   |
+| HO     | news        | catalogue        | 12/03/18   | mars  | ok    | ok      | ok   |
+| MM     | news        | cat_new-template | 06/03/18   | mars  | ok    | ok      | ok   |
+| MM     | news        | encart           | 06/03/18   | mars  | ok    | ok      | ok   |
 | TL+ID  | landing     | anniv            | 22/03/18   | mars  | ok    | ok      | ok   |
 | TL+ID  | news        | anniv            | 22/03/18   | mars  | ok    | ok      | ok   |
 | HO     | EC          | hp               | 12/03/18   | mars  | ok    | ok      | x    |
-| CV     | news        | catalogue        | 08/03/2018 | mars  | ok    | ok      | ok   |
+| CV     | news        | catalogue        | 08/03/18   | mars  | ok    | ok      | ok   |
 | CV+VF  | EC          | hp               | 08/03/18   | mars  | ok    | ok      | ok   |
 | MM     | EC          | hp               | 06/03/18   | mars  | ok    | ok      | ok   |
-| AL     | news        | catalogue        | 05/03/2018 | mars  | ok    | ok      | ok   |
-| TL+ID  | news        | TH04_printemps   | 26/02/2018 | mars  | ok    | ok      | ok   |
+| AL     | news        | catalogue        | 05/03/18   | mars  | ok    | ok      | ok   |
+| TL+ID  | news        | TH04_printemps   | 26/02/18   | mars  | ok    | ok      | ok   |
 | TL+ID  | EC+ZL       | TH04_printemps   | 26/02/18   | mars  | ok    | ok      | ok   |
-| allb   | shed+pictos | site             | 03/2018    | mars  | ok    | ok      | 7h   |
-| allb   | shedule     | news cat         | 03/2018    | mars  | ok    | ok      | 7h   |
-| AL     | EC          | hp               | 05/03/2018 | mars  | ok    | ok      | ok   |
+| allb   | shed+pictos | site             | 03/18      | mars  | ok    | ok      | 7h   |
+| allb   | shedule     | news cat         | 03/18      | mars  | ok    | ok      | 7h   |
+| AL     | EC          | hp               | 05/03/18   | mars  | ok    | ok      | ok   |
 | TL+ID  | news        | tarteSoleil      | 26/02/18   | fev   | 6v    | ok      | ok   |
 | ID     | news        | OM14_bvnlde      | 05/03/18   | mars  | ok    | ok      | ok   |
 | ID     | news        | relance Cat      | 05/03/18   | mars  | ok    | ok      | ok   |
