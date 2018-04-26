@@ -2,6 +2,13 @@
 
 | brand  | job         | intitulé         | deadline   | date  | info  | dossier | état |
 | :---:  | ---         | ---              | ---        | ---   | :---: | :---:   | ---: |
+| MM     | news        | cat              | 03/05/2018 | mai   | ok    | ok      | ok   |
+| MM     | EC          | hp               | 03/05/2018 | mai   | ok    | ok      | ok   |
+| CD     | news        | catalogue        | 24/04/18   | mai   | ok    | ok      | ok   |
+| CD     | EC          | hp               | 24/04/18   | mai   | ok    | ok      | ok   |
+| TL+ID  | news        | OM16             | 30/04/18   | mai   | ok    | ok      | ok   |
+| TL     | news        | relance Cat      | 07/05/18   | mai   | ok    | ok      | ok   |
+| ID     | news        | relance Cat      | 14/05/18   | mai   | ok    | ok      | ok   |
 | TL+ID  | news        | catalogue        | 23/04/2018 | mai   | ok    | ok      | ok   |
 | TL+ID  | EC          | TH06_cuisine     | 16/04/18   | avril | ok    | ok      | ok   |
 | TL+ID  | news        | TH06_cuisine     | 16/04/18   | avril | ok    | ok      | ok   |

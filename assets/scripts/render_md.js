@@ -1,5 +1,6 @@
 marked.setOptions({});
-
+console.log(marked.prototype)
+console.log( marked.name.__proto__ )
 var monmd = '';
 var url   = "./dl2018.md"
 
