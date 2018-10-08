@@ -2,7 +2,9 @@
 
 | brand  | job         | intitulé         | deadline   | date    | info  | état         |
 | :---:  | ---         | ---              | ---        | ---     | :---: | ---:         |
+| MM     | EC          | hp               | 04/10/18   | oct     | ok    | ok           |
 | AL     | news        | catalogue        | 01/10/18   | oct     | ok    | propX6       |
+| AL     | EC          | hp               | 04/10/18   | oct     | ok    | ok           |
 | TL     | news        | relance Cat      | 08/10/18   | oct     | ok    | ok           |
 | ID     | news        | relance Cat      | 08/10/18   | oct     | ok    | ok           |
 | TL+ID  | news        | TH13_Automnes    | 08/10/18   | oct     | ok    | ok           |
