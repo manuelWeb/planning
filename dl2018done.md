@@ -2,6 +2,8 @@
 
 | brand  | job          | intitulé              | deadline   | date    | info      | état         |
 | :---:  | ---          | ---                   | ---        | ---     | :---:     | ---:         |
+| TL     | pdf          | anniv appel sortant   | 23/11/2018 | nov     | V1…2      | ok           |
+| CD     | news         | catalogue             | 19/11/2018 | dec     | V1…2      | ok           |
 | AL     | news         | cat: modif items nav  | --         | nov     | ok        | ok           |
 | TL+ID  | news int     | TH15_Repas_Table_Fete | 05/11/2018 | nov     | vérif_int | ok           |
 | TL     | news         | relance Cat           | 04/11/2018 | nov     | vérif_int | ok           |
