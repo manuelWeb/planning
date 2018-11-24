@@ -1,6 +1,7 @@
 /* TODO > gérer le cas deadline --/nn/nn */
 // alert('actualisation des date -n en cours…')
-setTimeout(() => {
+// export const Hello = 'Hello'
+// setTimeout(() => {}, 50);
 
   function rmDaysToDate(old_date) {
     // split date dd / mm / yy
@@ -43,12 +44,14 @@ setTimeout(() => {
   function setDate (brand) {
 
     let brand_ = objBrand[brand].TD
-    // console.log(brand_)
+
+    // console.log(objBrand[brand])
+    // console.log(tdBrand[0].brand);
+    console.log(document.querySelectorAll(`#${tdBrand[0].brand} + table tr td`));
 
     while (lib_min < brand_.length) {
       var dead = brand_[lib_min].innerHTML.match(redt)
       var dead_n = rmDaysToDate(dead[0])
-
       brand_[lib_min+2].innerHTML = dead_n
       lib_min = lib(lib_min)
     }
@@ -56,9 +59,10 @@ setTimeout(() => {
     lib_min = 3
   }
 
+setTimeout(() => {
+  setDate( 0 )
+}, 1050);
 
-    console.log('hopla?')
-    setDate(0);setDate(1);setDate(2);setDate(3);setDate(4);setDate(5);
+setDate(1);setDate(2);setDate(3);setDate(4);setDate(5);
 
-}, 50);
 

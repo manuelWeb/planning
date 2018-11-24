@@ -1,4 +1,6 @@
-// import { setDeadline } from "./deadline_dude.js"
+// import { Hello } from "./deadline_dude.js"
+// console.log(Hello)
+// import { TL } from "./deadline_dude.js"
 // marked.setOptions({});
 console.log( `marked.prototype:${marked.prototype}` )
 console.log( marked.name.__proto__ )
@@ -8,7 +10,6 @@ var url   = "./dl2018.md"
 function reqListener() {
   monmd = this.responseText;
   document.getElementById('content').innerHTML = marked(monmd);
-  console.log('data is comming')
   // get table tr td[3]
   const table_row = document.querySelectorAll("table tr");
   const regDates  = /[0-9]{2}\/[0-9]{2}\/(17|18|19)/ig;
