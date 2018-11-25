@@ -42,27 +42,33 @@
   const redt = /[0-9]{2}\/[0-9]{2}\/[0-9]{2}/g
 
   function setDate (brand) {
+    // let brand_ = objBrand[brand].TD
+    let brand_ = document.querySelectorAll(`#${tdBrand[0].brand} + table tr td`)
 
-    let brand_ = objBrand[brand].TD
-
-    // console.log(objBrand[brand])
-    // console.log(tdBrand[0].brand);
-    console.log(document.querySelectorAll(`#${tdBrand[0].brand} + table tr td`));
-
+    // console.log(document.querySelectorAll(`#${tdBrand[0].brand} + table tr td`));
+    const result = []
     while (lib_min < brand_.length) {
+      // console.log(brand_[lib_min+2]);
       var dead = brand_[lib_min].innerHTML.match(redt)
       var dead_n = rmDaysToDate(dead[0])
+      console.log(`dead:${dead}, dead_n:${dead_n} `);
       brand_[lib_min+2].innerHTML = dead_n
       lib_min = lib(lib_min)
+      result.push(dead)
     }
     // re init lib_min
     lib_min = 3
+    console.log(`result:${result}`)
+    return brand_
   }
 
 setTimeout(() => {
-  setDate( 0 )
+  setDate( )
 }, 1050);
 
-setDate(1);setDate(2);setDate(3);setDate(4);setDate(5);
+
+// alert(AL_test[0])
+
+setDate(2);setDate(3);setDate(4);setDate(5);
 
 
