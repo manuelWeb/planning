@@ -24,21 +24,19 @@ xobj.send();
 
 // fn exe après rendu md->html
 function get_dead() {
-  const table_row = document.querySelectorAll("table tr")
   // set yellow bg color on deadline td
-  // ret get_td ret-> ary[0]:deadline_htmlcol, ary[1]:txt
-  // console.log(`deadline_txt:${get_td(table_row,3)[0]}`);
-  // deadline_txt
-  // console.log(`deadline_txt:${get_td(table_row,3)[1]}`);
+  const table_row = document.querySelectorAll("table tr")
   get_td(table_row, 3, "#FFFF00")[0];
 
-  // add span number in deadline
+  // add span number on deadline TD
   const deadline_txt = get_td(table_row,3)[1];
   const dead_sort    = sortAryArg(deadline_txt);
   const deadline_td  = get_td(table_row,3)[0];
   const dead_unique  = dead_sort.filter(onlyUnique);
-  console.log(dead_sort);
-  console.log(dead_unique);
+  // console.log(`deadline_txt:${deadline_txt}`);
+  // console.log(dead_sort);
+  // console.log(dead_unique);
+
   // const date_n_td = get_td(table_row,8,"#FF9900")[0];
   // const date_n_txt = get_td(table_row,8)[1];
   // const date_n_sort = sortAryArg(date_n_txt);

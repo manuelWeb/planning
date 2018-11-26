@@ -10,25 +10,27 @@ export function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
-export function getIdx(tab1, tab2, classpan, ok, cpt=0) {
-    // var cpt = 0;
-    function addIdx() {
-      for (var i = 0; i < tab1.length; i++) {
-        if( tab1[i].textContent === tab2[cpt] ) {
-          // console.log('job:',cpt,tab1[i],tab1[i].textContent);
-          // tab1[i].innerHTML += '<span class="' + classpan + '">' + (cpt + 1) + '</span>';
-          //cpt===0 ? vrai:{date la + récente} : faux:{dates ultérieures}
-          cpt === 0 ?
-            tab1[i].innerHTML += '<span class="' + ok + '">' + (cpt + 1) + '</span>'
-            :
-            tab1[i].innerHTML += '<span class="' + classpan + '">' + (cpt + 1) + '</span>'
-        }
-      }
-    }
+export function getIdx(tab1, tab2, classpan, ok, cpt=1) {
+  console.log(`tab2:`,tab2);
+    // tab1:[deadline_TD]
+    // tab2:[deadl_txt unique]
+  function addIdx() {
+    tab2.map( (i, idx) => {
+      console.log(i);
 
-    while(cpt < tab1.length) {
-      // tab2.shift();
-      addIdx();
-      cpt++;
-    }
+      tab1.map( (i_) => {
+        console.log(`i_:${i_.textContent}, ${i === i_.textContent}`);
+        if(i === i_.textContent){
+          //  ? bg{vert} : bg{gris}
+          cpt === 1 ?
+            i_.innerHTML += '<span class="' + ok + '">' + (cpt) + '</span>'
+            :
+            i_.innerHTML += '<span class="' + classpan + '">' + (cpt) + '</span>'
+        }
+      } )
+
+      cpt++
+    })
   }
+  addIdx();
+}
