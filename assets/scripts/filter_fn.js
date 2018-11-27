@@ -15,6 +15,9 @@ export function getIdx(tab1, tab2, classpan, ok, cpt=1) {
     // tab1:[deadline_TD]
     // tab2:[deadl_txt unique]
   function addIdx() {
+
+    console.log([...tab1][0].textContent.includes(tab2[0]));
+
     tab2.map( (i, idx) => {
       console.log(i);
 
@@ -30,6 +33,7 @@ export function getIdx(tab1, tab2, classpan, ok, cpt=1) {
       } )
 
       cpt++
+
     })
   }
   addIdx();
