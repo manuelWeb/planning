@@ -10,8 +10,22 @@ export function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
+let tidy_tab = []
+// let tidy_tab = {}
+let cpt = 1
+const isIn = function (params, tab1) {
+  // console.log([...tab1][0].textContent.includes(tab2[0]));
+  const tidytab = [...tab1].filter(tab1_item => tab1_item.textContent === params)
+  console.log(tidytab, cpt)
+  cpt ++
+  // return {tidy_tab :tidytab}
+  return tidy_tab.push(tidytab)
+}
+console.log('t_t: ',tidy_tab);
+
+
 export function getIdx(tab1, tab2, classpan, ok, cpt=1) {
-  console.log(`tab2:`,tab2);
+  // console.log(`tab2:`,tab2);
     // tab1:[deadline_TD]
     // tab2:[deadl_txt unique]
   function addIdx() {
@@ -19,6 +33,7 @@ export function getIdx(tab1, tab2, classpan, ok, cpt=1) {
     console.log([...tab1][0].textContent.includes(tab2[0]));
 
     tab2.map( (i, idx) => {
+      isIn(i,tab1)
       console.log(i);
 
       tab1.map( (i_) => {
