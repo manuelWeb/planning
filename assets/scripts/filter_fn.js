@@ -12,12 +12,9 @@ export function onlyUnique(value, index, self) {
 
 
 export function isIn (deadl_txt, dead_TD) {
-  // console.log([...dead_TD][0].textContent.includes(deadl_txt[0]));
-  // console.log([...deadl_txt, dead_TD]);
-  const tidytab = deadl_txt.map( (i) => {
-    return dead_TD.filter( dead_TD_item => dead_TD_item.textContent === i ? dead_TD_item : false )
-  })
-  return tidytab
+  return deadl_txt.map(
+    (i) => dead_TD.filter( dead_TD_item => dead_TD_item.textContent === i ? dead_TD_item : false )
+  )
 }
 
 

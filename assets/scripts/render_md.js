@@ -33,23 +33,17 @@ function get_dead() {
   const dead_sort    = sortAryArg(deadline_txt);
   const deadline_td  = get_td(table_row,3)[0];
   const dead_unique  = dead_sort.filter(onlyUnique);
-  // console.log(`deadline_txt:${deadline_txt}`);
-  // console.log(dead_sort);
-  // console.log(dead_unique);
 
-  // const date_n_td = get_td(table_row,8,"#FF9900")[0];
-  // const date_n_txt = get_td(table_row,8)[1];
-  // const date_n_sort = sortAryArg(date_n_txt);
-  // const date_n_unique = date_n_sort.filter(onlyUnique);
-
-  // console.log( isIn(dead_unique, deadline_td) );
   const test = isIn(dead_unique, deadline_td);
   console.log(test.length);
-  console.log(...test[1],test[1][1].textContent);
+  console.log(`...test[0]:`, ...test[0]);
+  console.log(`...test[1]:`, ...test[1]);
   console.log(`...test[2]:`, ...test[2]);
   console.log(`...test[3]:`, ...test[3],'end test[3');
   console.log(...test[5],test[5][0].textContent);
   getIdx(deadline_td, dead_unique, "job", "ok");
+  test[0][0].innerHTML += " -> Yolo!"
+  test[1].map(item => item.innerHTML += " -> Yolo2!")
   // getIdx(date_n_td, date_n_unique, "daten", "ok");
 
 }
