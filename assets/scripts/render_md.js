@@ -1,6 +1,6 @@
 // import { Hello } from "./deadline_dude.js"
 import get_td from "./get_td.js"
-import { sortAryArg, onlyUnique, getIdx } from "./filter_fn.js"
+import { sortAryArg, onlyUnique, getIdx, isIn } from "./filter_fn.js"
 
 // console.log( `marked.prototype:${marked.prototype}` )
 // console.log( marked.name.__proto__ )
@@ -42,6 +42,13 @@ function get_dead() {
   // const date_n_sort = sortAryArg(date_n_txt);
   // const date_n_unique = date_n_sort.filter(onlyUnique);
 
+  // console.log( isIn(dead_unique, deadline_td) );
+  const test = isIn(dead_unique, deadline_td);
+  console.log(test.length);
+  console.log(...test[1],test[1][1].textContent);
+  console.log(`...test[2]:`, ...test[2]);
+  console.log(`...test[3]:`, ...test[3],'end test[3');
+  console.log(...test[5],test[5][0].textContent);
   getIdx(deadline_td, dead_unique, "job", "ok");
   // getIdx(date_n_td, date_n_unique, "daten", "ok");
 

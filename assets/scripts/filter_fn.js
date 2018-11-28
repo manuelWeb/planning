@@ -10,18 +10,15 @@ export function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
-let tidy_tab = []
-// let tidy_tab = {}
-let cpt = 1
-const isIn = function (params, tab1) {
-  // console.log([...tab1][0].textContent.includes(tab2[0]));
-  const tidytab = [...tab1].filter(tab1_item => tab1_item.textContent === params)
-  console.log(tidytab, cpt)
-  cpt ++
-  // return {tidy_tab :tidytab}
-  return tidy_tab.push(tidytab)
+
+export function isIn (deadl_txt, dead_TD) {
+  // console.log([...dead_TD][0].textContent.includes(deadl_txt[0]));
+  // console.log([...deadl_txt, dead_TD]);
+  const tidytab = deadl_txt.map( (i) => {
+    return dead_TD.filter( dead_TD_item => dead_TD_item.textContent === i ? dead_TD_item : false )
+  })
+  return tidytab
 }
-console.log('t_t: ',tidy_tab);
 
 
 export function getIdx(tab1, tab2, classpan, ok, cpt=1) {
@@ -30,14 +27,12 @@ export function getIdx(tab1, tab2, classpan, ok, cpt=1) {
     // tab2:[deadl_txt unique]
   function addIdx() {
 
-    console.log([...tab1][0].textContent.includes(tab2[0]));
-
     tab2.map( (i, idx) => {
-      isIn(i,tab1)
-      console.log(i);
+      // console.log(isIn(i,tab1));
+      // console.log(i);
 
       tab1.map( (i_) => {
-        console.log(`i_:${i_.textContent}, ${i === i_.textContent}`);
+        // console.log(`i_:${i_.textContent}, ${i === i_.textContent}`);
         if(i === i_.textContent){
           //  ? bg{vert} : bg{gris}
           cpt === 1 ?
