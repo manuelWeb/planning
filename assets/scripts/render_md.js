@@ -35,15 +35,20 @@ function get_dead() {
   const dead_unique  = dead_sort.filter(onlyUnique);
 
   const test = isIn(dead_unique, deadline_td);
-  console.log(test.length);
-  console.log(`...test[0]:`, ...test[0]);
-  console.log(`...test[1]:`, ...test[1]);
-  console.log(`...test[2]:`, ...test[2]);
-  console.log(`...test[3]:`, ...test[3],'end test[3');
-  console.log(...test[5],test[5][0].textContent);
   getIdx(deadline_td, dead_unique, "job", "ok");
-  test[0][0].innerHTML += " -> Yolo!"
-  test[1].map(item => item.innerHTML += " -> Yolo2!")
+  console.log(test.length);
+  // console.log([...test][0]);
+  // console.log(`...test[1]:`, ...test[1]);
+  // console.log(`...test[2]:`, ...test[2]);
+  // console.log(`...test[3]:`, ...test[3],'end test[3');
+  console.log(...test[5],test[5][0].textContent);
+  // test[0][0].innerHTML += " -> Yolo!"
+  // test[2].map(item => item.innerHTML += " -> Yolo3!")
+  test.map(
+    (item, idx) => item.map(
+        (item_item,idx_idx) => item_item.innerHTML += `-> Yolo ${idx+1}/${idx_idx+1}`
+      )
+  )
   // getIdx(date_n_td, date_n_unique, "daten", "ok");
 
 }
