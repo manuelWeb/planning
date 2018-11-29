@@ -19,9 +19,8 @@ export function isIn (deadl_txt, dead_TD) {
 
 
 export function getIdx(tab1, tab2, classpan, ok, cpt=1) {
-  // console.log(`tab2:`,tab2);
-    // tab1:[deadline_TD]
-    // tab2:[deadl_txt unique]
+  // console.log(`tab1:[deadline_TD]`,tab1);
+  // console.log(`tab2:[deadl_txt unique]`,tab1);
   function addIdx() {
 
     tab2.map( (i, idx) => {
@@ -37,7 +36,7 @@ export function getIdx(tab1, tab2, classpan, ok, cpt=1) {
             :
             i_.innerHTML += '<span class="' + classpan + '">' + (cpt) + '</span>'
         }
-      } )
+      })
 
       cpt++
 

@@ -31,3 +31,17 @@
   font-size: 18px;
   background: darkgreen;
 }
+.ok_, .job_ {
+  display: inline-block;
+  text-align: center;
+  color: #FFF;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 50px;
+}
+.ok_ {background: #006400;}
+.job_ {background: #8e8e8e;}
+.ok_ b,.job_ b {font-size: 21px;}
+.ok_ sup,.job_ sup {position: relative; bottom: 2px;}

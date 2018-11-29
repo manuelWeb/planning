@@ -33,20 +33,32 @@ function get_dead() {
   const dead_sort    = sortAryArg(deadline_txt);
   const deadline_td  = get_td(table_row,3)[0];
   const dead_unique  = dead_sort.filter(onlyUnique);
-
   const test = isIn(dead_unique, deadline_td);
-  getIdx(deadline_td, dead_unique, "job", "ok");
-  console.log(test.length);
-  // console.log([...test][0]);
-  // console.log(`...test[1]:`, ...test[1]);
-  // console.log(`...test[2]:`, ...test[2]);
-  // console.log(`...test[3]:`, ...test[3],'end test[3');
-  console.log(...test[5],test[5][0].textContent);
-  // test[0][0].innerHTML += " -> Yolo!"
-  // test[2].map(item => item.innerHTML += " -> Yolo3!")
+
+  // getIdx(deadline_td, dead_unique, "job", "ok");
+  var incrementColor = function(color, step){
+    var colorToInt = parseInt(color.substr(1), 16),                     // Convert HEX color to integer
+        nstep = parseInt(step);                                         // Convert step to integer
+    if(!isNaN(colorToInt) && !isNaN(nstep)){                            // Make sure that color has been converted to integer
+            colorToInt += nstep;                                            // Increment integer with step
+            var ncolor = colorToInt.toString(16);                           // Convert back integer to HEX
+            ncolor = '#' + (new Array(7-ncolor.length).join(0)) + ncolor;   // Left pad "0" to make HEX look like a color
+            if(/^#[0-9a-f]{6}$/i.test(ncolor)){                             // Make sure that HEX is a valid color
+                return ncolor;
+            }
+        }
+        return color;
+  };
+  console.log(incrementColor('#CCCCCC', 10));
+  console.log(...test);
+
   test.map(
     (item, idx) => item.map(
-        (item_item,idx_idx) => item_item.innerHTML += `-> Yolo ${idx+1}/${idx_idx+1}`
+        (item_,idx_) => item_.innerHTML +=
+        idx == 0 ?
+        ` <span class="ok_"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`
+        :
+        ` <span class="job_" style="background:${incrementColor('#CCCCCC', idx*idx)}"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`
       )
   )
   // getIdx(date_n_td, date_n_unique, "daten", "ok");
