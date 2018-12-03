@@ -36,19 +36,7 @@ function get_dead() {
   const test = isIn(dead_unique, deadline_td);
 
   // getIdx(deadline_td, dead_unique, "job", "ok");
-  var incrementColor = function(color, step){
-    var colorToInt = parseInt(color.substr(1), 16),                     // Convert HEX color to integer
-        nstep = parseInt(step);                                         // Convert step to integer
-    if(!isNaN(colorToInt) && !isNaN(nstep)){                            // Make sure that color has been converted to integer
-            colorToInt += nstep;                                            // Increment integer with step
-            var ncolor = colorToInt.toString(16);                           // Convert back integer to HEX
-            ncolor = '#' + (new Array(7-ncolor.length).join(0)) + ncolor;   // Left pad "0" to make HEX look like a color
-            if(/^#[0-9a-f]{6}$/i.test(ncolor)){                             // Make sure that HEX is a valid color
-                return ncolor;
-            }
-        }
-        return color;
-  }
+
   var compteur = (function() {
     var compteurPrive = 0;
     function changeValeur(val) {
@@ -57,26 +45,25 @@ function get_dead() {
     return {
       increment: function() {
         changeValeur(111);
-      },
-      valeur: function() {
-        return compteurPrive;
-      },
+        return (function() {
+          return "#" + compteurPrive;
+        })()
+      }
     };
   })()
-  console.log(compteur.valeur());
-  compteur.increment();
 
-  console.log(incrementColor('#CCCCCC', 10));
   console.log(...test);
 
   test.map(
-    (item, idx) => item.map(
-        (item_,idx_) => item_.innerHTML +=
+    (item, idx) => {
+      item.map( (item_,idx_) => {
+      console.log(`idx:${idx} - idx:${idx_};`)
+      item_.innerHTML +=
         idx == 0 ?
         ` <span class="ok_"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`
         :
-        ` <span class="job_" style="background:${incColor(111, 111)}"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`
-      )
+        ` <span class="job_" style="background:${compteur.increment()}"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`}
+    )}
   )
   // getIdx(date_n_td, date_n_unique, "daten", "ok");
 
