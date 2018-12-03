@@ -48,7 +48,24 @@ function get_dead() {
             }
         }
         return color;
-  };
+  }
+  var compteur = (function() {
+    var compteurPrive = 0;
+    function changeValeur(val) {
+      compteurPrive += val;
+    }
+    return {
+      increment: function() {
+        changeValeur(111);
+      },
+      valeur: function() {
+        return compteurPrive;
+      },
+    };
+  })()
+  console.log(compteur.valeur());
+  compteur.increment();
+
   console.log(incrementColor('#CCCCCC', 10));
   console.log(...test);
 
@@ -58,7 +75,7 @@ function get_dead() {
         idx == 0 ?
         ` <span class="ok_"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`
         :
-        ` <span class="job_" style="background:${incrementColor('#CCCCCC', idx*idx)}"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`
+        ` <span class="job_" style="background:${incColor(111, 111)}"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`
       )
   )
   // getIdx(date_n_td, date_n_unique, "daten", "ok");
