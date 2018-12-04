@@ -37,24 +37,30 @@ function get_dead() {
 
   // getIdx(deadline_td, dead_unique, "job", "ok");
 
-  function compteur() {
+  const compteur = function () {
     let compteurPrive = 0
-    function changeValeur(val) {
-      compteurPrive += val;
+    function changeValeur() {
+      compteurPrive += 111;
     }
-    const inc = function(val) {
-      changeValeur(val);
-      return "#" + compteurPrive;
+    function changeValeur_( colorStart,step ) {
+      compteurPrive = compteurPrive - step
+      console.log(`compteurPrive:${compteurPrive}`);
     }
-    return {inc}
-    // return {
-    //   increment: function() {
-    //     changeValeur(111);
-    //     return "#" + compteurPrive;
-    //   }
-    // }
-  }
-  const compteur_ = compteur()
+    // const inc = function(val) {
+    const inc = function(colorStart,step) {
+      // changeValeur(val);
+      changeValeur_(colorStart,step);
+      return "#" + (colorStart-compteurPrive);
+    }
+    const dec = function(colorStart,step) {
+      // fx Oups -- = +
+      console.log(`colorStart+compteurPrive:${colorStart+compteurPrive}`);
+      changeValeur_(colorStart,step);
+      return "#" + (colorStart+compteurPrive);
+    }
+    return { inc, dec }
+
+  }()
 
   // console.log(...test);
 
@@ -66,7 +72,7 @@ function get_dead() {
         idx == 0 ?
         ` <span class="ok_"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`
         :
-        ` <span class="job_" style="background:${compteur_.inc(111)}"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`}
+        ` <span class="job_" style="background:${compteur.inc(111111,111111)}"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`}
     )}
   )
   // getIdx(date_n_td, date_n_unique, "daten", "ok");
