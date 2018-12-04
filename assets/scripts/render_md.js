@@ -37,32 +37,36 @@ function get_dead() {
 
   // getIdx(deadline_td, dead_unique, "job", "ok");
 
-  var compteur = (function() {
-    var compteurPrive = 0;
+  function compteur() {
+    let compteurPrive = 0
     function changeValeur(val) {
       compteurPrive += val;
     }
-    return {
-      increment: function() {
-        changeValeur(111);
-        return (function() {
-          return "#" + compteurPrive;
-        })()
-      }
-    };
-  })()
+    const inc = function(val) {
+      changeValeur(val);
+      return "#" + compteurPrive;
+    }
+    return {inc}
+    // return {
+    //   increment: function() {
+    //     changeValeur(111);
+    //     return "#" + compteurPrive;
+    //   }
+    // }
+  }
+  const compteur_ = compteur()
 
-  console.log(...test);
+  // console.log(...test);
 
   test.map(
     (item, idx) => {
       item.map( (item_,idx_) => {
-      console.log(`idx:${idx} - idx:${idx_};`)
+      // console.log(`idx:${idx} - idx:${idx_};`)
       item_.innerHTML +=
         idx == 0 ?
         ` <span class="ok_"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`
         :
-        ` <span class="job_" style="background:${compteur.increment()}"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`}
+        ` <span class="job_" style="background:${compteur_.inc(111)}"><b>${idx+1}</b><sup>/${item.length - (idx_+1) + 1}</sup></span>`}
     )}
   )
   // getIdx(date_n_td, date_n_unique, "daten", "ok");
