@@ -1,0 +1,17 @@
+node_modules
+python-3.7.7-amd64.exe
+python.exe
+python3.dll
+python37.dll
+pythonw.exe
+tcl
+vcruntime140.dll
+DLLs
+Doc
+LICENSE.txt
+Lib
+libs/
+include/
+Scripts/
+Tools/
+NEWS.txt

@@ -1,5 +1,6 @@
 /* TODO > gérer le cas deadline --/nn/nn */
 // alert('actualisation des date -n en cours…')
+
 setTimeout(() => {
 
   function rmDaysToDate(old_date) {
@@ -10,15 +11,15 @@ setTimeout(() => {
       split_date[2], // yy
       split_date[1] * 1 - 1, // mm
       split_date[0] * 1 - 14 // days
-    );
+      );
 
     var new_day   = new_date.getDate();
     var new_month = new_date.getMonth() + 1;
     var new_year  = new_date.getYear();
-
+    
     new_day = (new_day < 10 ? "0" : "") + new_day; // ajoute un zéro devant pour la forme
     new_month = (new_month < 10 ? "0" : "") + new_month; // ajoute un zéro devant pour la forme
-
+    
     var new_date_text = new_day + "/" + new_month + "/" + new_year;
     return new_date_text;
   }
