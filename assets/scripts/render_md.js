@@ -12,7 +12,7 @@ function reqListener() {
   // get table tr td[3]
   const table_row = document.querySelectorAll("table tr");
   // const regDates  = /[0-9]{2}\/[0-9]{2}\/(18|19|20)/ig;
-  const regDates  = /[0-9]{2}\/[0-9]{2}\/(18|19|20)/ig;
+  const regDates  = /^[0-9]{2}\/[0-9]{2}\/(18|19|20)$/ig;
   // const regDates  = /[0-9]{2}\/[0-9]{2}\/[0-9]{2}/ig;
 
   const get_td = (tab_tr, td_idx, bgcolor) => {
